@@ -152,8 +152,8 @@ this is the most important function in this whole process, animate() function ge
 
 ## CannonJS
 
-**main target:** A lightweight and simple 3D physics engine for the web.
-**contribution:** adding physics to the 3D World.
-**citation:** https://github.com/pmndrs/cannon-es
-**license:** Cannon.js is licensed under MIT license, and it grants any person who obtains a copy of the software and associated files the right to use, copy, modify, merge, distribute, publish, sublicense and sell copies of the software.
-**alternatives:** physijs
+**main target:** A lightweight and simple 3D physics engine for the web.<br />
+**contribution:** adding physics to the 3D World.<br />
+**citation:** https://github.com/pmndrs/cannon-es<br />
+**license:** Cannon.js is licensed under MIT license, and it grants any person who obtains a copy of the software and associated files the right to use, copy, modify, merge, distribute, publish, sublicense and sell copies of the software.<br />
+**alternatives:** physijs<br />
