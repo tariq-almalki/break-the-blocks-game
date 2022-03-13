@@ -142,11 +142,11 @@ this is the most important function in this whole process, animate() function ge
 
 ## ThreeJS
 
-**main target:** Three.js is a Javascript library that is used to create and display animated 3D objects in a web browser using WebGL.
-**contribution:** creating and animating 3D Objects.
-**citation:** https://threejs.org
-**license:** Three.js is licensed under MIT license, and it grants any person who obtains a copy of the software and associated files the right to use, copy, modify, merge, distribute, publish, sublicense and sell copies of the software.
-**alternatives:** BabylonJS
+**main target:** Three.js is a Javascript library that is used to create and display animated 3D objects in a web browser using WebGL.<br />
+**contribution:** creating and animating 3D Objects.<br />
+**citation:** https://threejs.org<br />
+**license:** Three.js is licensed under MIT license, and it grants any person who obtains a copy of the software and associated files the right to use, copy, modify, merge, distribute, publish, sublicense and sell copies of the software.<br />
+**alternatives:** BabylonJS<br />
 
 ---
 
