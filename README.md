@@ -36,7 +36,7 @@ CannonJS, Which it's popular Physics library that can handle collisions and the 
 
 ## Project Idea
 
-Break The Block Game is well-known game that exists from 1970s, it's mechanism for playing is known, the player will try to deflect the bouncing ball so she/he break the blocks, once she/he break all the blocks, she/he will win, but if the ball bypass the bar then she/he will lose.
+Break The Block Game is well-known game that exists from 1970s, it's mechanism for playing is known, the player will try to deflect the bouncing ball so he/she break the blocks, once he/she break all the blocks, he/she will win, but if the ball bypass the bar then he/she will lose.
 
 ---
 
