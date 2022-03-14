@@ -132,7 +132,8 @@ adding sounds to the game is an important thing to do, mixing the visual side wi
 
 ## animate function
 
-this is the most important function in this whole process, animate() function gets registered to run every frame, it gets registered via requestAnimationFrame() function, for example when you register this method by passing it to requestAnimationFrame() if you have a screen that is 60FPS then this function gets executed 60 times per second, in other words your screen get rendered 60 times per second.
+this is the most important function in this whole process, animate function gets registered so it can run every frame, it gets registered via requestAnimationFrame function, by passing it as an arugment to requestAnimationFrame.
+if you have a screen that is 60FPS then this function gets executed 60 times per second, in other words your application gets rendered 60 times per second.
 
 ---
 
