@@ -9,8 +9,8 @@
 ## Contents
 
 -   [Introduction](#introduction)
--   [Project Idea](#project-idea)
--   [Project Features](#project-features)
+-   [Idea](#idea)
+-   [Features](#features)
 -   [ThreeX](#threex)
 -   [game sounds](#game-sounds)
 -   [animate function](#animate-function)
@@ -34,13 +34,13 @@ CannonJS, Which it's popular Physics library that can handle collisions and the 
 
 ---
 
-## Project Idea
+## Idea
 
 Break The Block Game is well-known game that exists from 1970s, it's mechanism for playing is known, the player will try to deflect the bouncing ball so he/she break the blocks, once he/she break all the blocks, he/she will win, but if the ball bypass the bar then he/she will lose.
 
 ---
 
-## Project Features
+## Features
 
 you will have two main components, first one is "the main menu", second one is "the playground", let us start with the main menu, in the main menu you will have the "title" of the game, "play" button and name of game creator going up and down.
 
