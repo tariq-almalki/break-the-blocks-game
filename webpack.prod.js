@@ -8,14 +8,14 @@ const smp = new SpeedMeasurePlugin();
 module.exports = smp.wrap(
     merge(common, {
         mode: 'production',
-        devServer: {
-            static: {
-                directory: path.resolve(__dirname, 'dist'),
-            },
-            port: 8080,
-            hot: true,
-            open: true,
-            magicHtml: true,
-        },
+        // devServer: {
+        //     static: {
+        //         directory: path.resolve(__dirname, 'dist'),
+        //     },
+        //     port: 8080,
+        //     hot: true,
+        //     open: true,
+        //     magicHtml: true,
+        // },
     })
 );
