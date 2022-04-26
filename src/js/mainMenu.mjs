@@ -309,5 +309,5 @@ domEvents.bind(off, 'click', offButtonFunction);
 // };
 
 window.playAgain = function () {
-    window.open('http://localhost:8080/', '_self');
+    window.open('https://break-the-blocks-game.vercel.app', '_self');
 };
