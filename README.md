@@ -138,8 +138,8 @@ if you have a screen that is 60FPS then this function gets executed 60 times per
 ---
 
 ## Try it!
+IT'S LIVE  https://break-the-blocks-game.vercel.app 
 
-IT'S LIVE => https://break-the-blocks-game.vercel.app 
 ---
 
 ## ThreeJS
