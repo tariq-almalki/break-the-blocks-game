@@ -241,7 +241,7 @@ function plusOnButtonFunction() {
 
 function minusOnButtonFunction() {
     // prettier-ignore
-    mainMenuSound.volume = mainMenuSound.volume === 0.0 ? 0 : Number((mainMenuSound.volume - 0.1).toFixed(1));
+    mainMenuSound.volume = mainMenuSound.volume === 0.1 ? 0.1 : Number((mainMenuSound.volume - 0.1).toFixed(1));
 }
 
 function onButtonFunction() {
