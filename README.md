@@ -138,7 +138,7 @@ if you have a screen that is 60FPS then this function gets executed 60 times per
 ---
 
 ## Try it!
-it's LIVE => <a href="https://break-the-blocks-game.vercel.app" target="_blank">break-the-blocks-game</a>
+it's LIVE => [break-the-blocks-game](https://break-the-blocks-game.vercel.app)
 
 ---
 
