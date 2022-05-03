@@ -1,4 +1,4 @@
-# break The Blocks Game
+# Break The Blocks Game
 
 > built using Three.js & Cannon.js
 
