@@ -14,7 +14,7 @@ module.exports = {
     entry: [
         // for await in async functions
         'babel-regenerator-runtime',
-        path.resolve(__dirname, './src/js/mainMenu.mjs'),
+        path.resolve(__dirname, './src/js/entry.mjs'),
     ],
 
     output: {
@@ -30,6 +30,9 @@ module.exports = {
                 test: /\.css$/,
                 // from right to left
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                exclude: {
+                    and: [/node_modules/]
+                }
             },
             {
                 test: /\.m?js$/,
