@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+#webgl-wrapper-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; 
+}
+
+#webgl-container {
+    height: 200px;
+    width: 550px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
