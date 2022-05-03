@@ -138,7 +138,7 @@ if you have a screen that is 60FPS then this function gets executed 60 times per
 ---
 
 ## Try it!
-live demo => [break-the-blocks-game](https://break-the-blocks-game.vercel.app)
+Live Demo => [break-the-blocks-game](https://break-the-blocks-game.vercel.app)
 
 ---
 
