@@ -14,7 +14,7 @@
 -   [ThreeX](#threex)
 -   [game sounds](#game-sounds)
 -   [animate function](#animate-function)
--   [Try it!](#try-it!)
+-   [Try it!](#try-it)
 -   [ThreeJS](#threejs)
 -   [CannonJS](#cannonjs)
 
