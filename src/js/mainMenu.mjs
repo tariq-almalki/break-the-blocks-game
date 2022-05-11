@@ -1,6 +1,5 @@
 import { playSound, mainMenuSound } from './loadingResources.mjs';
 import '../public/css/main.css';
-import '../public/css/github-corner.css';
 import * as THREE from '../../threeJS/three.module.js';
 import { THREEx } from '../../threeX/THREEx-Events/threex.domevents.mjs';
 import KeyboardState from '../../threeX/THREEx-keyboard/threeX.keyboardState.js';

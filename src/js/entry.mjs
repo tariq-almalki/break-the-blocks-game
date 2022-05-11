@@ -1,5 +1,6 @@
 import { WebGL } from './webgl.mjs';
 import '../public/css/webgl-error.css';
+import '../public/css/github-corner.css';
 
 const whiteGithubCorner = document.getElementById('white-github-corner');
 const blackGithubCorner = document.getElementById('black-github-corner');
