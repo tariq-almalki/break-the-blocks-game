@@ -8,6 +8,12 @@ if (WebGL.isWebGL2Available()) {
     blackGithubCorner.style.display = 'none';
     await import('./mainMenu.mjs');
 } else {
+    window.onload = function () {
+        Particles.init({
+            selector: '.background',
+        });
+    };
+
     whiteGithubCorner.style.display = 'none';
     const warning = WebGL.getWebGLErrorMessage();
     // prettier-ignore
@@ -16,5 +22,13 @@ if (WebGL.isWebGL2Available()) {
     const overlay = document.getElementById('overlay');
     overlay.style.display = 'none';
     webglWrapperContainer.style.display = 'flex';
+    webglWrapperContainer.style.position = 'relative';
     webglContainer.appendChild(warning);
+
+    // creating the background
+    const canvas = document.createElement('canvas');
+    canvas.classList.add('background');
+
+    // getting the body tag
+    webglWrapperContainer.appendChild(canvas);
 }

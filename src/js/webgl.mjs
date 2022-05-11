@@ -51,7 +51,7 @@ export class WebGL {
         element.style.fontSize = '20px';
         element.style.fontWeight = 'bold';
         element.style.textAlign = 'center';
-        element.style.background = 'inherit';
+        element.style.background = 'none';
         element.style.color = '#000';
         element.style.padding = '0px';
         element.style.width = 'inherit';

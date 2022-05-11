@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 body{
-    font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
@@ -17,8 +19,39 @@ body{
     height: 200px;
     width: 550px;
     border-radius: 10px;
-    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* added */
+    position: relative;
+    box-shadow: 0px 0px 1rem 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+#webgl-container::before {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    /* background-image: inherit; */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* center */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(1px);
+}
+
+#webglmessage{
+    z-index: 1;
+}
+
+.background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
