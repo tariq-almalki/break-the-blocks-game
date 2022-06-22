@@ -7,7 +7,6 @@ for (let i = 0; i < 10000; i++) {
     const x = THREE.MathUtils.randFloatSpread(2000);
     const y = THREE.MathUtils.randFloatSpread(2000);
     const z = THREE.MathUtils.randFloatSpread(2000);
-
     vertices.push(x, y, z);
 }
 

@@ -19,14 +19,14 @@ import {
     arrayOfBlocks,
     arrayOfBodies,
 } from './playground/playground.mjs';
-import {
-    blockHitSound,
-    winSound,
-    loseSound,
-    mainMenuSound,
-} from '../loadingResources.mjs';
+import { blockHitSound, winSound, loseSound, mainMenuSound } from '../loadingResources.mjs';
 import { particles } from './world/playgroundStars.mjs';
 import * as CANNON from '../../../cannon-es/cannon-es.js';
+import refreshRate from 'refresh-rate';
+
+const fps = await refreshRate();
+
+console.log(fps);
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x000000);
@@ -62,7 +62,7 @@ const dragControls = new DragControls([spaceship], camera, AppRenderer.domElemen
 AppRenderer.setSize(clientWidth, clientHeight);
 
 // Helpers
-const AxesHelper = new THREE.AxesHelper(5);
+const AxesHelper = new THREE.AxesHelper(40);
 // scene.add(camera, AxesHelper);
 
 // physics
@@ -96,21 +96,23 @@ function animate() {
 
     let ElapsedTime = clock.getElapsedTime();
     let deltaTime = ElapsedTime - oldElapsedTime;
-    oldElapsedTime = deltaTime;
+    oldElapsedTime = ElapsedTime;
 
     // particles rotation
-    particles.rotation.y += 0.001;
+    particles.rotation.y += deltaTime / 10;
 
     // to update the world 60 times per second
-    world.step(1 / 60, deltaTime, 3);
+    world.step(1 / fps, ElapsedTime, 3);
+
+    console.log(spaceship.position.x);
 
     // moving spaceship - Right and Left arrows
     spaceship.position.x = keyboard.pressed('right')
-        ? spaceship.position.x + 0.5 > 42.5
+        ? spaceship.position.x + 0.5 > 40
             ? spaceship.position.x
             : spaceship.position.x + 0.5
         : keyboard.pressed('left')
-        ? spaceship.position.x - 0.5 < -42.5
+        ? spaceship.position.x - 0.5 < -40
             ? spaceship.position.x
             : spaceship.position.x - 0.5
         : spaceship.position.x;
@@ -118,11 +120,11 @@ function animate() {
     // moving spaceship - A and D
     spaceship.position.x =
         keyboard.pressed('a') || keyboard.pressed('A')
-            ? spaceship.position.x - 0.5 < -42.5
+            ? spaceship.position.x - 0.5 < -40
                 ? spaceship.position.x
                 : spaceship.position.x - 0.5
             : keyboard.pressed('d') || keyboard.pressed('D')
-            ? spaceship.position.x + 0.5 > 42.5
+            ? spaceship.position.x + 0.5 > 40
                 ? spaceship.position.x
                 : spaceship.position.x + 0.5
             : spaceship.position.x;
@@ -141,7 +143,7 @@ function animate() {
         endGameLose();
     }
 
-    // to move the ball
+    // to move the ball, when first time moving the bar.
     if (originalX < spaceship.position.x || originalX > spaceship.position.x) {
         if (dragLocker === 0) {
             //prettier-ignore
@@ -197,10 +199,10 @@ dragControls.addEventListener('drag', function (event) {
 
     position.y = -25.9;
 
-    if (position.x > 42.5) {
-        position.x = 42.5;
-    } else if (position.x < -42.5) {
-        position.x = -42.5;
+    if (position.x > 40) {
+        position.x = 40;
+    } else if (position.x < -40) {
+        position.x = -40;
     }
 });
 

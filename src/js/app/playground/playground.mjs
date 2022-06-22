@@ -110,14 +110,14 @@ export const rightRecBody = new CANNON.Body({
 
 // spaceship
 export const spaceship = new THREE.Mesh(
-    new THREE.BoxGeometry(9, 1.5, 2),
+    new THREE.BoxGeometry(14, 1.5, 2),
     new THREE.MeshMatcapMaterial({ matcap: spaceshipMatCap })
 );
 
 spaceship.position.set(0, -25.9, 0);
 //! CANNON.js
 const spaceshipShape = new CANNON.Box(
-    new CANNON.Vec3(9 * 0.5, 1.5 * 0.5, 2 * 0.5)
+    new CANNON.Vec3(14 * 0.5, 1.5 * 0.5, 2 * 0.5)
 );
 
 export const spaceshipBody = new CANNON.Body({

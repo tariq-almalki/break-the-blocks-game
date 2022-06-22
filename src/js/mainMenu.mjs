@@ -7,6 +7,15 @@ import { OrbitControls } from '../../threeJS/examples/jsm/controls/OrbitControls
 // prettier-ignore
 import { title, play, creator, settings, mainMenuMusic, back, on, off, plusOn, minusOn } from './font.mjs';
 import { particles } from './app/world/mainMenuStars.mjs';
+import Stats from 'stats.js';
+import refreshRate from 'refresh-rate';
+
+const fps = await refreshRate();
+
+// stat object
+const stats = new Stats();
+stats.showPanel(0);
+document.body.appendChild(stats.dom);
 
 // global variables
 // Cancel Animation Variable
@@ -110,6 +119,7 @@ const domEvents = new THREEx.DomEvents(camera, renderer.domElement);
 // OrbitControls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // smooth stopping
+controls.dampingFactor = fps < 70 ? 0.05 : 0.02;
 controls.target = play.position.clone(); // to focus at the same as the play Object
 
 camera.position.set(0, 100, 300);
@@ -123,33 +133,27 @@ controls.update();
 const clock = new THREE.Clock();
 
 // adding to the scene
-scene.add(
-    camera,
-    title,
-    play,
-    settings,
-    creator,
-    mainMenuMusic,
-    back,
-    on,
-    plusOn,
-    minusOn,
-    off,
-    particles
-);
+scene.add(camera, title, play, settings, creator, mainMenuMusic, back, on, plusOn, minusOn, off, particles);
+
+let oldElapsedTime = 0;
 
 function animate() {
+    stats.begin();
     cancel = requestAnimationFrame(animate);
+
     let ElapsedTime = clock.getElapsedTime(); //Get the seconds passed since the clock started
+    let deltaTime = ElapsedTime - oldElapsedTime;
+    oldElapsedTime = ElapsedTime;
 
     // particles rotation
-    particles.rotation.y += 0.001;
+    particles.rotation.y += deltaTime / 10;
 
     // creator
     creator.position.y = -20 * Math.abs(Math.cos(ElapsedTime * 2));
 
     controls.update();
     renderer.render(scene, camera);
+    stats.end();
 }
 
 animate();
