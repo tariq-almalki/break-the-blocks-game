@@ -188,13 +188,16 @@ document.addEventListener('keypress', event => {
     }
 });
 
-document.addEventListener('dblclick', event => {
+const fullscreen = event => {
+    console.log(event);
     if (!document.fullscreenElement) {
         document.body.requestFullscreen();
         return;
     }
     document.exitFullscreen();
-});
+};
+
+document.addEventListener('dblclick', fullscreen);
 
 // fullscreen events
 
@@ -217,7 +220,8 @@ domEvents.addEventListener(play, 'click', async event => {
     renderer.domElement.remove();
 });
 
-domEvents.addEventListener(settings, 'click', function (event) {
+domEvents.addEventListener(settings, 'click', event => {
+    document.removeEventListener('dblclick', fullscreen);
     // prettier-ignore
     {
         gsap.to(title.position, { duration: 10.5, ease: "bounce.out", y: 30000 , overwrite: true });
@@ -233,7 +237,8 @@ domEvents.addEventListener(settings, 'click', function (event) {
     }
 });
 
-domEvents.addEventListener(back, 'click', function (event) {
+domEvents.addEventListener(back, 'click', event => {
+    document.addEventListener('dblclick', fullscreen);
     // prettier-ignore
     {
         gsap.to(mainMenuMusic.position, { duration: 10.5, ease: "bounce.out", y: -30000, overwrite: true });
