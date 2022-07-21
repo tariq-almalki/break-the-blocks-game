@@ -160,7 +160,7 @@ animate();
 
 // events
 
-document.addEventListener('visibilitychange', (event) => {
+document.addEventListener('visibilitychange', event => {
     if (document.visibilityState === 'visible' && on_yAxis === 59) {
         mainMenuSound.play();
     } else if (document.visibilityState === 'hidden' || on_yAxis === 49) {
@@ -176,17 +176,29 @@ window.addEventListener('resize', () => {
     renderer.setSize(clientWidth, clientHeight);
 });
 
-document.addEventListener('keypress', (event) => {
+// fullscreen events
+
+document.addEventListener('keypress', event => {
     // prettier-ignore
     if (!document.fullscreenElement && (event.key === 'f' || event.key === 'F' )) {
         document.body.requestFullscreen();
         // prettier-ignore
-    } else if(!document.fullscreenElement && (event.key === 'f' || event.key === 'F' )) {
+    } else if(document.fullscreenElement && (event.key === 'f' || event.key === 'F' )) {
         document.exitFullscreen();
     }
 });
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener('dblclick', event => {
+    if (!document.fullscreenElement) {
+        document.body.requestFullscreen();
+        return;
+    }
+    document.exitFullscreen();
+});
+
+// fullscreen events
+
+document.addEventListener('keydown', event => {
     if (event.key === 'ArrowUp') {
         // prettier-ignore
         mainMenuSound.volume = mainMenuSound.volume === 1.0 ? 1 : Number((mainMenuSound.volume + 0.1).toFixed(1));
@@ -196,7 +208,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-domEvents.addEventListener(play, 'click', async (event) => {
+domEvents.addEventListener(play, 'click', async event => {
     playSound.play();
     cancelAnimationFrame(cancel);
     // App render
