@@ -68,7 +68,7 @@ anything before 0.1 or after 1000 will not be visible, 0.1 and 1000 represents t
 
 ![ThreeJS fovY](/Images/README-files/output-onlinepngtools.png)
 
-in the playground you will have 52 colored blocks, that you have to destroy to win, you will have your purple bar that you can control using either the mouse or the keyboard keys/arrows, A & D keys or left & right arrows. (there a little hack here, you can exploit it to increase the speed of the bar, by pressing down together A and Left arrow or D and right arrow, the speed of the bar will double).
+in the playground you will have 52 colored blocks, that you have to destroy to win, you will have your purple bar that you can control using either the mouse or the keyboard keys/arrows, A & D keys or left & right arrows. (there is a little hack here, you can exploit it to increase the speed of the bar, by pressing down together A and Left arrow or D and right arrow, the speed of the bar will double).
 
 ---
 
