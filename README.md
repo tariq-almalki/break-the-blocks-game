@@ -1,5 +1,3 @@
-# Break The Blocks Game
-
 > built using Three.js & Cannon.js
 
 ![playground](Images/README-files/main_menu.png)
